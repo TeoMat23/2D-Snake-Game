@@ -22,14 +22,14 @@ void Snake::Init(const sf::Texture &texture)
 }
 
 void Snake::Move(const sf::Vector2f &direction)
-{
+{    
     m_tail->setPosition(m_head->getPosition() + direction);
     m_head = m_tail;
     ++m_tail;
 
     if (m_tail == m_body.end())
     {
-        m_tail = m_body.begin();
+       m_tail = m_body.begin();
     }
 }
 
